@@ -1,4 +1,5 @@
 .job-list-item {
+    position: relative;
     width: 1368px;
     background-color: #fff;
     border-radius: 8px;
@@ -6,7 +7,6 @@
     margin: 0 auto 8px auto;
     padding: 24px 16px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     font-family: proxima-nova, sans-serif;
     font-style: normal;
@@ -19,6 +19,7 @@
 .job-list-item__content {
     display: flex;
     width: 75%;
+    margin-right: 32px;
 }
 .job-list-item__image {
     width: 85px;
@@ -42,12 +43,14 @@
 .job-list-item__location{
     margin-right: 8px;
 }
-.job-list-item__closure {
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-}
 .job-list-item__mark {
+    position: absolute;
     width: 20px;
-    margin-bottom: 50%;
+    top: 29px;
+    right: 24px;
+}
+.job-list-item__date {
+    position: absolute;
+    bottom: 24px;
+    right: 16px;
 }

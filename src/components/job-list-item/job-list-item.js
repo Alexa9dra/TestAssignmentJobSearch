@@ -11,7 +11,7 @@ const JobListItem = (props) => {
                     <img className="job-list-item__image" src={`${pictures[0]}?random=${new Date().getTime()}`} alt="Company"/>
                 </div>
                 <div>
-                    <div className="job-list-item__title">{title}{title}</div>
+                    <div className="job-list-item__title">{title}</div>
                     <div className="job-list-item__company">Department name • {name}</div>
                     <div>
                         <img className="job-list-item__location" src={require('./../../icons/location_icon.png')} alt="Rate star"/>
@@ -19,13 +19,11 @@ const JobListItem = (props) => {
                     </div>
                 </div>
             </div>
-            <div>
-                <img src={require('./../../icons/star_icon.png')} alt="Rate star"/>
-            </div>
-            <div className="job-list-item__closure">
-                <img className="job-list-item__mark" src={require('./../../icons/mark_icon.png')} alt="Mark icon"/>
-                <div>{createdAt.slice(0,10)}</div>
-            </div>
+            
+            <img src={require('./../../icons/star_icon.png')} alt="Rate star"/>
+
+            <img className="job-list-item__mark" src={require('./../../icons/mark_icon.png')} alt="Mark icon"/>
+            <div className="job-list-item__date">{createdAt.slice(0,10).replaceAll("-", "/")}</div>
         </li>
     );
 }

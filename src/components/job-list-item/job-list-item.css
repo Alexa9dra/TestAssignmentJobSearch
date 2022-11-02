@@ -1,0 +1,53 @@
+.job-list-item {
+    width: 1368px;
+    background-color: #fff;
+    border-radius: 8px;
+    list-style-type: none;
+    margin: 0 auto 8px auto;
+    padding: 24px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: proxima-nova, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: 0.23619px;
+    color: #878D9D;
+}
+.job-list-item__content {
+    display: flex;
+    width: 75%;
+}
+.job-list-item__image {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    margin-right: 26px;
+}
+.job-list-item__title {
+    font-family: proxima-nova, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.625px;
+    color: #3A4562;
+    margin-bottom: 8px;
+}
+.job-list-item__company {
+    margin-bottom: 8px;
+}
+.job-list-item__location{
+    margin-right: 8px;
+}
+.job-list-item__closure {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.job-list-item__mark {
+    width: 20px;
+    margin-bottom: 50%;
+}

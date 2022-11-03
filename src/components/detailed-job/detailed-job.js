@@ -1,7 +1,12 @@
-import React from 'react';
+// import "./job-list.css";
 
-export default () => (
-  <div>
-    <h1>Wellcome to our cool shop! :-)</h1>
-  </div>
-);
+const DetailedJob = ({data}) => {
+  
+  return (
+      <ul className="job-list">
+          {data.title}
+      </ul>
+  )
+}
+
+export default DetailedJob;

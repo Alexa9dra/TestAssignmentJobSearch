@@ -12,6 +12,7 @@ class App extends Component {
             data: [], 
             DataisLoaded: false,
             currentPage: "JobList",
+            currentJob: '',
             currentListPage: 1
         }
     }
@@ -27,16 +28,32 @@ class App extends Component {
             })
     }
 
+    onJobSelect = (currentJob) => {
+        this.setState({currentJob});
+    }
+
+    onPageSelect = (currentPage) => {
+        this.setState({currentPage});
+    }
+
     render() {
-        const { DataisLoaded, data, currentListPage } = this.state;
+        const { DataisLoaded, data, currentJob, currentListPage } = this.state;
+        
         if (!DataisLoaded) return <div>
             <h1> Please, wait some time.... </h1> </div> ;
    
         return (
             <div>
-                {/* <button onClick={()=>this.setState({currentPage:"JobList"})}>JobList</button> */}
-                {this.state.currentPage==="JobList"?<JobList data={data} currentListPage={currentListPage}/>:null}
-                {this.state.currentPage === "DetailedJob" ? <DetailedJob /> : null}
+                {this.state.currentPage==="JobList"?
+                    <JobList 
+                        data={data} 
+                        currentListPage={currentListPage}
+                        onJobSelect={this.onJobSelect}
+                        onPageSelect={this.onPageSelect}/>
+                    :null}
+                {this.state.currentPage === "DetailedJob" ? 
+                    <DetailedJob/> 
+                    : null}
             </div>
     );}
 }

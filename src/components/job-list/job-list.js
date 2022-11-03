@@ -1,8 +1,8 @@
-import JobListItem from "../job-list-item/job-list-item";
+import JobListItem from "../job-list-item/job-list-item"
 
-// import "./employees-list.css";
+import "./job-list.css";
 
-const JobList = ({data, currentListPage}) => {
+const JobList = ({data, currentListPage, onJobSelect, onPageSelect}) => {
   const elementsToShow = 10;
 
   const elements = data.slice(elementsToShow*(currentListPage - 1), elementsToShow*currentListPage).map(item => {
@@ -11,12 +11,14 @@ const JobList = ({data, currentListPage}) => {
       return (
           <JobListItem 
               key={id} 
+              onJobSelect={() => onJobSelect(id)}
+              onPageSelect={() => onPageSelect("DetailedJob")}
               {...itemProps}/>
       );
   })
 
   return (
-      <ul>
+      <ul className="job-list">
           {elements}
       </ul>
   )

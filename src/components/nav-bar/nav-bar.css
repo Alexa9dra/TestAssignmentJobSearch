@@ -1,0 +1,103 @@
+.btn-group {
+    margin: 0 auto;
+    padding: 10px 23px;
+    border-radius: 10px;
+    background-color: #FFF;
+    box-shadow: 2px 1px 7px rgba(0, 0, 0, 0.08), 0px 2px 1px -1px rgba(0, 0, 0, 0.04), 0px 1px 3px rgba(0, 0, 0, 0.12);
+}
+.list-page-btn {
+    display: inline-block;
+    background-color: transparent;
+    border: 1px solid transparent;
+    width: 30px;
+    height: 30px;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 25px;
+    letter-spacing: 1.73333px;
+    color: #70778B;
+    cursor: pointer;
+}
+.active-navbar-btn {
+    position: relative;
+    color: #5876C5;
+}
+.active-navbar-btn::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: -11px;
+    left: 0;
+    border-bottom: 3px solid #5876C5;
+    cursor: default;
+}
+.back-btn {
+    position: relative;
+    margin-right: 40px;
+}
+.back-btn::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    right: -10px;
+    top: -1px;
+    border-right: 1px solid #DEE3EF;
+    cursor: default;
+}
+.next-btn {
+    position: relative;
+    margin-left: 40px;
+}
+.next-btn::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: -10px;
+    top: -1px;
+    border-left: 1px solid #DEE3EF;
+    cursor: default;
+}
+@media only screen and (max-width: 600px) {
+    .btn-group {
+        position: relative;
+        width: 85%;
+        padding: 9px 16px;
+        background-color: #EFF0F5;
+        text-align: center;
+    }
+    .btn-group::before {
+        content: "";
+        position: absolute;
+        height: 80%;
+        left: 40px;
+        top: 5px;
+        border-right: 1px solid #dee0e6;
+    }
+    .btn-group::after {
+        content: "";
+        position: absolute;
+        height: 80%;
+        right: 40px;
+        top: 5px;
+        border-right: 1px solid #dee0e6;
+    }
+    .list-page-btn {
+        width: 24px;
+        height: 24px;
+        font-size: 16px;
+        line-height: 16px;
+        color: #858B9D;
+    }
+    .active-navbar-btn {
+        color: #56699E;
+    }
+    .active-navbar-btn::after {
+        border-bottom: 3px solid #56699E;
+    }
+    .back-btn {
+        display: none;
+    }
+    .next-btn {
+        display: none;
+    }
+}

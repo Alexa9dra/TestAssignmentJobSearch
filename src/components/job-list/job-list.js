@@ -1,26 +1,33 @@
 import JobListItem from "../job-list-item/job-list-item"
+import NavBar from "../nav-bar/nav-bar";
 
 import "./job-list.css";
 
-const JobList = ({data, currentListPage, onJobSelect, onPageSelect}) => {
-  const elementsToShow = 10;
+const JobList = ({data, currentListPage, onJobSelect, listSize, dataAmount, onListPageSelect}) => {
 
-  const elements = data.slice(elementsToShow*(currentListPage - 1), elementsToShow*currentListPage).map(item => {
+  const elements = data.slice(listSize*(currentListPage - 1), listSize*currentListPage).map(item => {
       const {id, ...itemProps} = item;
 
       return (
           <JobListItem 
               key={id} 
-              onJobSelect={() => onJobSelect(id)}
-              onPageSelect={() => onPageSelect("DetailedJob")}
-              {...itemProps}/>
+              {...itemProps}
+              onJobSelect={() => onJobSelect(id, "DetailedJob")}/>
       );
   })
 
   return (
-      <ul className="job-list">
-          {elements}
-      </ul>
+    <section className="job-list-section">
+        <style>{"body {background-color: #E6E9F2;}"}</style>
+        <ul className="job-list">
+            {elements}
+        </ul>
+        <NavBar
+          currentListPage={currentListPage}
+          listSize={listSize}
+          dataAmount={dataAmount}
+          onListPageSelect={onListPageSelect}/>
+    </section>
   )
 }
 

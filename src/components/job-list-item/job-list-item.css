@@ -7,12 +7,10 @@
     padding: 24px 16px;
     display: flex;
     align-items: center;
-    font-family: proxima-nova, sans-serif;
-    font-weight: 400;
     font-size: 16px;
     line-height: 25px;
     letter-spacing: 0.23619px;
-    color: #878D9D;
+    color: #9FA4B1;
     box-shadow: 2px 1px 7px rgba(0, 0, 0, 0.08), 0px 2px 1px -1px rgba(0, 0, 0, 0.04), 0px 1px 3px rgba(0, 0, 0, 0.12);
 }
 .job-list-item__content {
@@ -24,29 +22,45 @@
     height: 85px;
     border-radius: 50%;
     margin-right: 26px;
+    object-fit: cover;
 }
 .job-list-item__title {
     font-weight: 700;
     font-size: 20px;
     letter-spacing: -0.625px;
-    color: #3A4562;
+    color: #616A81;
     margin-bottom: 8px;
+}
+.job-list-item__title:hover {
+    cursor: pointer;
+    color: #878D9D;
+}
+.job-list-item__title:active {
+    color: #3A4562;
 }
 .job-list-item__company {
     margin-bottom: 8px;
 }
-.job-list-item__location{
+.location_icon{
+    width: 13px;
+    height: 18px;
     margin-right: 8px;
 }
 .job-list-item__rate {
     position: absolute;
+    width: 100px;
     right: 12%;
     text-align: center;
     line-height: 19px;
 }
+.job-list-item__rate img {
+    width: 19px;
+    height: 20px;
+}
 .job-list-item__mark {
     position: absolute;
-    width: 20px;
+    width: 16px;
+    height: 20px;
     top: 29px;
     right: 24px;
 }
@@ -58,8 +72,9 @@
 
 @media only screen and (max-width: 600px) {
     .job-list-item {
-        max-width: 400px;
+        width: 85%;
         padding: 45px 16px 27px 16px;
+        background-color: #EFF0F5;
     }
     .job-list-item__content {
         width: 90%;

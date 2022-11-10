@@ -1,4 +1,21 @@
+.job-list-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+    padding: 29px 0 64px;
+}
+
 .job-list {
     list-style: none;
-    padding: 0;
+    margin-bottom: 49px;
+}
+
+@media only screen and (max-width: 600px) {
+    .job-list-section {
+        padding-top: 9px 0 17px;
+    }
+    .job-list {
+        margin-bottom: 26px;
+    }
 }

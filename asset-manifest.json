@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/TestAssignmentJobSearch/static/css/main.9866bcbc.css",
+    "main.js": "/TestAssignmentJobSearch/static/js/main.4d98f27d.js",
+    "index.html": "/TestAssignmentJobSearch/index.html",
+    "main.9866bcbc.css.map": "/TestAssignmentJobSearch/static/css/main.9866bcbc.css.map",
+    "main.4d98f27d.js.map": "/TestAssignmentJobSearch/static/js/main.4d98f27d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9866bcbc.css",
+    "static/js/main.4d98f27d.js"
+  ]
+}

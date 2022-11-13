@@ -1,16 +1,18 @@
-import Map from "./../map/map"
+import Map from "./../map/map";
 
 import "./detailed-job-map.css";
 
-import * as location_img from "./../../icons/location_icon.png"
+import * as location_img from "./../../icons/location_icon.png";
 
+//Describes and form a map section and contacts information
 const DetailedJobMap = (props) => {
     const {name, email, phone, address, location} = props.data;
 
-  return (
-    <section className="detailed-job-section">
-          <h1 className="detailed-job__title contacts-title">Contacts</h1>
-          <section className="map-section">
+    return (
+        <section className="detailed-job-section">
+            <h1 className="detailed-job__title contacts-title">Contacts</h1>
+
+            <section className="map-section">
                 <div className="map-section__info">
                     <div className="map-section__content">
                         <p className="map-section__title">
@@ -33,8 +35,8 @@ const DetailedJobMap = (props) => {
                 <Map
                     location={location}/>
             </section>
-    </section>
-  )
-}
+        </section>
+    )
+};
 
 export default DetailedJobMap;

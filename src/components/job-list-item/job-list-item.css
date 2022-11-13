@@ -34,6 +34,7 @@
 .job-list-item__title:hover {
     cursor: pointer;
     color: #878D9D;
+    text-decoration: underline;
 }
 .job-list-item__title:active {
     color: #3A4562;

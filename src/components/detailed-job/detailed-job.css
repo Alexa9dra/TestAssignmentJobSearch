@@ -131,6 +131,8 @@
     display: none;
 }
 .additional-info__feature {
+    display: inline-block;
+    text-align: center;
     min-width: 220px;
     padding: 17px 0;
     border-radius: 8px;
@@ -142,6 +144,8 @@
     margin-right: 8px;
 }
 .additional-info__empl-type {
+    display: inline-block;
+    text-align: center;
     border-color: #B7C0DA;
     background-color: #E1E6F4;
     color: #55699E;

@@ -1,16 +1,17 @@
-import React from 'react'
-import { GoogleMap, MarkerF } from '@react-google-maps/api';
+import { GoogleMap, MarkerF } from "@react-google-maps/api";
 
 import "./map.css";
 
+//Sets th map to be 100% of the container size
 const containerStyle = {
-  width: '100%',
-  height: '100%'
+  width: "100%",
+  height: "100%"
 };
 
+//Describes and forms a map
 const Map = ({location}) => {
     return (
-        <div className='map-view'>
+        <div className="map-view">
             <GoogleMap
                 options={{mapId: "144cdee64e3e2a11"}}
                 mapContainerStyle={containerStyle}
@@ -28,6 +29,6 @@ const Map = ({location}) => {
             </GoogleMap>
         </div>  
     )
-}
+};
 
 export default Map;

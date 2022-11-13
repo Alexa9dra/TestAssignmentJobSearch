@@ -20,7 +20,7 @@
     background-color: #2A3047;
     border-radius: 8px 8px 0 0;
     height: 40%;
-    background-image: url('./../../icons/map_shape.png');
+    background-image: url("./../../icons/map_shape.png");
     background-repeat: no-repeat;
     padding-top: 31px;
 }

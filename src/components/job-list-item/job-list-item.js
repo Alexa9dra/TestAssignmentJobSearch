@@ -1,14 +1,15 @@
-import "./job-list-item.css"
+import "./job-list-item.css";
 
-import * as location_img from "./../../icons/location_icon.png"
-import * as mark_img from "./../../icons/mark_icon.png"
+import * as location_img from "./../../icons/location_icon.png";
+import * as mark_img from "./../../icons/mark_icon.png";
 import * as star_img from "./../../icons/star_icon.png";
 
+//Describes and forms a job list records
 const JobListItem = (props) => {
-
     const {name, title, address, pictures, createdAt, rating = 3, onJobSelect} = props,
-          companyPicture = `${pictures[0]}?random=${new Date().getTime()}`,
-          date = createdAt.slice(0,10).replaceAll("-", "/"),
+          companyPicture = `${pictures[0]}?random=${new Date().getTime()}`, //Forms picture for company photo
+          date = createdAt.slice(0,10).replaceAll("-", "/"), //Forms date of record creation
+          //Forms the rate for record
           rate = Array.apply(null, Array(rating ? rating : 0)).map((star, index) => <img key={index} src={star_img.default} alt="Rate star"/>);
 
 
@@ -36,6 +37,6 @@ const JobListItem = (props) => {
             <div className="job-list-item__date">{date}</div>
         </li>
     );
-}
+};
 
 export default JobListItem;

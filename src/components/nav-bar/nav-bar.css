@@ -1,9 +1,15 @@
-.btn-group {
+.navbar {
     margin: 0 auto;
     padding: 10px 23px;
     border-radius: 10px;
     background-color: #FFF;
     box-shadow: 2px 1px 7px rgba(0, 0, 0, 0.08), 0px 2px 1px -1px rgba(0, 0, 0, 0.04), 0px 1px 3px rgba(0, 0, 0, 0.12);
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 25px;
+    letter-spacing: 1.73333px;
+    color: #70778B;
+    cursor: default;
 }
 .list-page-btn {
     display: inline-block;
@@ -58,14 +64,14 @@
     cursor: default;
 }
 @media only screen and (max-width: 960px) {
-    .btn-group {
+    .navbar {
         position: relative;
         width: 85%;
         padding: 9px 16px;
         background-color: #EFF0F5;
         text-align: center;
     }
-    .btn-group::before {
+    .navbar::before {
         content: "";
         position: absolute;
         height: 80%;
@@ -73,7 +79,7 @@
         top: 5px;
         border-right: 1px solid #dee0e6;
     }
-    .btn-group::after {
+    .navbar::after {
         content: "";
         position: absolute;
         height: 80%;

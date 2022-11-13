@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/TestAssignmentJobSearch/static/css/main.8530ab6a.css",
+    "main.css": "/TestAssignmentJobSearch/static/css/main.1f840dc8.css",
     "main.js": "/TestAssignmentJobSearch/static/js/main.420c4b33.js",
     "index.html": "/TestAssignmentJobSearch/index.html",
-    "main.8530ab6a.css.map": "/TestAssignmentJobSearch/static/css/main.8530ab6a.css.map",
+    "main.1f840dc8.css.map": "/TestAssignmentJobSearch/static/css/main.1f840dc8.css.map",
     "main.420c4b33.js.map": "/TestAssignmentJobSearch/static/js/main.420c4b33.js.map"
   },
   "entrypoints": [
-    "static/css/main.8530ab6a.css",
+    "static/css/main.1f840dc8.css",
     "static/js/main.420c4b33.js"
   ]
 }

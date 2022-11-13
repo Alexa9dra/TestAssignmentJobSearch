@@ -14,7 +14,7 @@ class App extends Component {
             currentPage: "JobList",
             currentJob: '',
             currentListPage: 1,
-            listSize: 10
+            listSize: 2
         }
     }
 

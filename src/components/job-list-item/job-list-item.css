@@ -70,7 +70,7 @@
     right: 16px;
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 960px) {
     .job-list-item {
         width: 85%;
         padding: 45px 16px 27px 16px;

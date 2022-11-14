@@ -13,13 +13,13 @@ class App extends Component {
             currentPage: "JobList", //Specifies the page to load
             currentJob: "", //Specifies the job to load
             currentListPage: 1, //Indicates the current list page
-            listSize: 2 //Specifies how many records will be on one page of the list
+            listSize: 6 //Specifies how many records will be on one page of the list
         }
     }
 
     //Connects to API. When gets data, writes it down and changes DataIsLoaded status
     componentDidMount() {
-        fetch("https://api.json-generator.com/templates/ZM1r0eic3XEy/data?access_token=wm3gg940gy0xek1ld98uaizhz83c6rh2sir9f9fu")
+        fetch("https://63725a6d078587786191eddc.mockapi.io/api/jobsearch/jobs")
             .then((res) => res.json())
             .then((json) => {
                 this.setState({

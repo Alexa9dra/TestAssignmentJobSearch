@@ -16,15 +16,15 @@ const Map = ({location}) => {
                 options={{mapId: "144cdee64e3e2a11"}}
                 mapContainerStyle={containerStyle}
                 center={{
-                    lat: location.lat+0.1,
-                    lng: location.long
+                    lat: Number(location[0]) +0.035,
+                    lng: Number(location[1])
                 }}
                 zoom={10}>
                 <MarkerF
                     icon={{url: require("./../../icons/location_icon.png"), scaledSize: { width : 20, height : 30}}}
                     position={{
-                        lat: location.lat,
-                        lng: location.long
+                        lat: Number(location[0]),
+                        lng: Number(location[1])
                     }}/>
             </GoogleMap>
         </div>  

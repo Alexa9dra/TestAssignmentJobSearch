@@ -6,12 +6,12 @@ import * as star_img from "./../../icons/star_icon.png";
 
 //Describes and forms a job list records
 const JobListItem = (props) => {
-    const {name, title, address, pictures, createdAt, rating = 3, onJobSelect} = props,
+    const {name, title, address, pictures, createdAt, rating, onJobSelect} = props,
           companyPicture = `${pictures[0]}?random=${new Date().getTime()}`, //Forms picture for company photo
           date = createdAt.slice(0,10).replaceAll("-", "/"), //Forms date of record creation
-          //Forms the rate for record
-          rate = Array.apply(null, Array(rating ? rating : 0)).map((star, index) => <img key={index} src={star_img.default} alt="Rate star"/>);
-
+          fullAddress = address.join(", "), //Forms address
+          //Forms the rate for record. Math.floor(Math.random() * rating) is added for randomization of rates. 
+          rate = Array.apply(null, Array(Math.floor(Math.random() * rating))).map((star, index) => <img key={index} src={star_img.default} alt="Rate star"/>);
 
     return (
         <li className="job-list-item">
@@ -24,7 +24,7 @@ const JobListItem = (props) => {
                     <div className="job-list-item__company">Department name • {name}</div>
                     <div>
                         <img className="location_icon" src={location_img.default} alt="Location icon"/>
-                        {address}
+                        {fullAddress}
                     </div>
                 </div>
             </div>

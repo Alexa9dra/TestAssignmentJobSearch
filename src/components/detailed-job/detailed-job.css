@@ -116,6 +116,7 @@
     margin-bottom: 35px;
 }
 .job-details__job-descr-list {
+    margin-bottom: 30px;
     list-style-image: url("./../../icons/list-item_icon.png");
 }
 .additional-info__title {

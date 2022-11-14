@@ -6,7 +6,8 @@ import * as location_img from "./../../icons/location_icon.png";
 
 //Describes and form a map section and contacts information
 const DetailedJobMap = (props) => {
-    const {name, email, phone, address, location} = props.data;
+    const {name, email, phone, address, location} = props.data,
+          fullAddress = address.join(", "); //Forms address
 
     return (
         <section className="detailed-job-section">
@@ -22,7 +23,7 @@ const DetailedJobMap = (props) => {
 
                         <p className="map-section__address">
                             <img className="location_icon" src={location_img.default} alt=""/>
-                            {address}<br/>
+                            {fullAddress}<br/>
                         </p>
 
                         <p className="map-section__contacts">

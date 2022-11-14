@@ -4,27 +4,22 @@ import "./detailed-job.css";
 
 //Processes the job description
 const processingDescr = (data) => {
-	const pointFirst = "Responsopilities:",
-		  pointSecond = "Compensation & Benefits:", //Text points to separate the text into logical parts
-		  descr = data.slice(0, data.indexOf(pointFirst)), //Gets the job description
+	const descr = data.description, //Gets the job description
 		  //Gets the job responsopilities
-		  resp = data.slice(data.indexOf(pointFirst) + pointFirst.length, data.indexOf(pointSecond)),
+		  resp = data.responsopilities,
 		  //Gets the job "Compensation & Benefits" and turn it into list
-		  comp = data.slice(data.indexOf(pointSecond) + pointSecond.length).split(".")
-			.map((item, index, comp) => (index + 1 === comp.length ? "" : <li key={index}>{item}</li>)),
-		  lastPart = comp[comp.length - 1]; //Gets the remaining text
+		  comp = data.compensationBenefits.split(".")
+			.map((item, index, comp) => (index + 1 === comp.length ? "" : <li key={index}>{item}</li>));
 
 	return (
 		<>
 			<p className="job-details__job-descr-text">{descr}</p>
 
-			<div className="job-details__job-color-text">{pointFirst}</div>
+			<div className="job-details__job-color-text">{"Responsopilities:"}</div>
 			<p className="job-details__job-descr-text">{resp}</p>
 
-			<div className="job-details__job-color-text">{pointSecond}</div>
+			<div className="job-details__job-color-text">{"Compensation & Benefits:"}</div>
 			<ul className="job-details__job-descr-list">{comp}</ul>
-
-			<p className="job-details__job-descr-text">{lastPart}</p>
 		</>
 	)
 };

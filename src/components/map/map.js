@@ -16,7 +16,7 @@ const Map = ({location}) => {
                 options={{mapId: "144cdee64e3e2a11"}}
                 mapContainerStyle={containerStyle}
                 center={{
-                    lat: Number(location[0]) +0.035,
+                    lat: Number(location[0]) +0.15,
                     lng: Number(location[1])
                 }}
                 zoom={10}>

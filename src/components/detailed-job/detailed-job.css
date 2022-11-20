@@ -189,7 +189,7 @@
     color: #E4E5EA;
 }
 
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 1200px) {
     .detailed-job {
         padding: 24px 17px 130px;
         color: #5C637A;

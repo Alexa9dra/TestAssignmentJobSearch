@@ -63,7 +63,7 @@
     border-left: 1px solid #DEE3EF;
     cursor: default;
 }
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 1200px) {
     .navbar {
         position: relative;
         width: 85%;
